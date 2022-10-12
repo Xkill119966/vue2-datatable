@@ -24,7 +24,6 @@ export default {
     return {
       supportBackup: true,
       supportNested: true,
-      storageKey : 'AD',
       tblClass: 'table-bordered',
       tblStyle: 'color: #666',
       pageSizeOptions: [5, 10, 15, 20],

@@ -14,9 +14,11 @@ export default {
     tblStyle: [String, Object, Array], // inline styles for <table>
     fixHeaderAndSetBodyMaxHeight: Number, // a fancy prop which combines two props into one
     supportNested: [Boolean, String], // support nested components feature (String is only for 'accordion')
-    supportBackup: Boolean // support backup for `HeaderSettings`
+    supportBackup: Boolean, // support backup for `HeaderSettings`
+    storageKey: String // support backup for `HeaderSettings`
+
   },
-  data () {
+  data() {
     let datatableInstance = this
     while (datatableInstance.$options.name !== 'Datatable') {
       datatableInstance = datatableInstance.$parent
@@ -28,7 +30,7 @@ export default {
   },
   methods: {
     // usage: <component :is="forDynCompIs(XXX)" ... />
-    forDynCompIs (component) {
+    forDynCompIs(component) {
       // according to https://vuejs.org/v2/guide/components.html#Dynamic-Components
       // dynamic components can be names (string) or component objects
       return typeof component === 'object' ? component : this.comp[component]

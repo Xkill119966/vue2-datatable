@@ -84,7 +84,7 @@ export default {
   props: {
     columns: { type: Array, required: true },
     supportBackup: { type: Boolean, required: true },
-    storageKey: { type: String, default: "defaultKey" },
+    storageKey: { type: String, required: true, default: "defaultKey" },
   },
   data() {
     const origSettings = stringify(this.columns);
