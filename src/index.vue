@@ -2,7 +2,7 @@
   <div name="Datatable">
     <div v-if="$slots.default || HeaderSettings" class="clearfix" style="margin-bottom: 10px">
       <header-settings v-if="HeaderSettings" class="pull-right"
-        :columns="columns" :support-backup="supportBackup">
+        :columns="columns" :support-backup="supportBackup" :storage-key="storageKey">
       </header-settings>
       <slot />
     </div>
